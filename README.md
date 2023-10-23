@@ -1,1 +1,7 @@
 # PlayNote
+
+I created a simple API using ASP.NET Web API and C# for managing game reviews, where people can post reviews for games. Its existence is purely for learning purposes.
+
+This API aims to get familiar with some new technologies and practices in web development. 
+
+I implemented the whole application in an asynchronous way - everything that could be async is async. The application uses MVC using `ControllerBase` and makes calls to the repository layer. The repository layer accesses data `SQLite` via `Entity Framework`. I implemented all the CRUD operations, including full and partial updates using `JSONPatch`. Services for logging and validation were injected using dependency injection. For logging, I used `Serilog` and `FluentValidation` for validation. Routes which return a list of entities are paginated and implement a search feature. The application itself uses a `JWT` token for authentication and authorization. This is implemented just for the sake of understanding rather than the practical use of JWT. Nevertheless, the application uses policy-based authorization and is injected into SwaggerUI. Every piece of code is documented and generates XML and this is also displayed in SwaggerUI. 
